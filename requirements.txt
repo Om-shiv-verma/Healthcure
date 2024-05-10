@@ -4,7 +4,6 @@ opencv-python
 numpy>=1.19.5,<1.21.2
 os-sys
 Werkzeug
-cv2
 pickle4
 imutils
 scikit-learn
