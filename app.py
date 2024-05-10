@@ -19,7 +19,6 @@ alzheimer_model = load_model('models/alzheimer_model.h5')
 pneumonia_model = load_model('models/pneumonia_model.h5')
 
 
-
 # Configuring Flask
 UPLOAD_FOLDER = 'static/uploads'
 ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg'])
@@ -29,10 +28,12 @@ app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.secret_key = "secret key"
 
+
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1] in ALLOWED_EXTENSIONS
 
 ############################################# BRAIN TUMOR FUNCTIONS ################################################
+
 
 def preprocess_imgs(set_name, img_size):
     """
@@ -40,9 +41,10 @@ def preprocess_imgs(set_name, img_size):
     """
     set_new = []
     for img in set_name:
-        img = cv2.resize(img,dsize=img_size,interpolation=cv2.INTER_CUBIC)
+        img = cv2.resize(img, dsize=img_size, interpolation=cv2.INTER_CUBIC)
         set_new.append(preprocess_input(img))
     return np.array(set_new)
+
 
 def crop_imgs(set_name, add_pixels_value=0):
     """
@@ -80,23 +82,28 @@ def crop_imgs(set_name, add_pixels_value=0):
 
 ########################### Routing Functions ########################################
 
+
 @app.route('/')
 def home():
     return render_template('homepage.html')
+
 
 @app.route('/braintumor')
 def brain_tumor():
     return render_template('braintumor.html')
 
+
 @app.route('/alzheimer')
 def alzheimer():
     return render_template('alzheimer.html')
+
 
 @app.route('/pneumonia')
 def pneumonia():
     return render_template('pneumonia.html')
 
 ########################### Result Functions ########################################
+
 
 @app.route('/resultbt', methods=['POST'])
 def resultbt():
