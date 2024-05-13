@@ -1,3 +1,4 @@
+gunicorn
 Flask
 urllib3
 opencv-python
@@ -13,3 +14,4 @@ matplotlib
 plotly
 seaborn
 tensorflow-gpu
+

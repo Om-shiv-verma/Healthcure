@@ -1,6 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
   <style>
+    html {
+      cursor: default;
+    }
+
+    * {
+      transition: all 0.3s ease;
+      box-sizing: border-box;
+      font-family: ’Lato’, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    /* Change cursor style on hover */
+    a:hover,
+    button:hover {
+      cursor: pointer;
+    }
+
     .headstyle {
       color: rgb(255, 255, 255);
       font-variant: petite-caps;
@@ -14,12 +31,6 @@
       margin-right: 1px;
     }
 
-    * {
-      box-sizing: border-box;
-      font-family: ’Lato’, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
     ul {
       list-style: none;
       padding-left: 0;
@@ -104,8 +115,149 @@
     .ft-legal-list li:nth-last-child(2) {
       flex: 1; /* same as flex-grow: 1; */
     }
-  </style>
 
+    /* 1 para section */
+    p {
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      color: #333;
+      text-align: justify;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    /* Style for line breaks */
+    br {
+      display: none; /* Hide line breaks */
+    }
+    /* Hover effect for the paragraph */
+    p:hover {
+      transform: scale(1.01);
+      transition: transform 0.3s ease;
+    }
+
+    /* Media query for responsiveness */
+    @media (max-width: 768px) {
+      p {
+        font-size: 14px;
+      }
+    }
+
+    /* 2nd section  */
+    .divstyle {
+      margin: 40px 20px 60px 20px;
+    }
+
+    /* Style for the rows */
+    .row {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
+    /* Style for the columns */
+    .col {
+      flex: 0 0 auto;
+    }
+
+    /* Style for the headings */
+    .headstyle {
+      font-size: 18px;
+      text-align: center;
+      padding: 10px;
+    }
+
+    /* Style for the images */
+    .img-fluid {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Hover effect for the columns */
+    .col:hover {
+      transform: translateY(-5px);
+      transition: transform 0.3s ease;
+    }
+
+    /* Hover effect for the images */
+    .img-fluid:hover {
+      opacity: 0.8;
+    }
+
+    /* Media query for responsiveness */
+    @media (max-width: 768px) {
+      .headstyle {
+        font-size: 16px;
+      }
+    }
+
+    /* 3 rd section*/
+    h3 {
+      color: #fff;
+      font-variant: petite-caps;
+      background-color: #000;
+      margin-bottom: 0;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    /* Style for italicized text */
+    i {
+      font-style: italic;
+    }
+
+    /* Style for paragraphs */
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    /* Style for rows */
+    .row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    /* Style for columns */
+    .col {
+      flex: 1;
+      padding: 0 10px;
+    }
+
+    /* Style for images */
+    .img-fluid {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border-radius: 10px;
+    }
+
+    /* Media query for responsiveness */
+    @media (max-width: 768px) {
+      .row {
+        flex-direction: column;
+      }
+
+      .col {
+        padding: 10px 0;
+      }
+
+      h3 {
+        font-size: 16px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+    }
+  </style>
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
@@ -176,7 +328,7 @@
     </h1>
 
     <div class="row" style="font-size: 20px; padding: 0px 50px 50px 50px">
-      <p>
+      <p style="text-justify">
         <b>HealthCure</b> is an all in one medical solution app which brings 3
         Disease, The disease prediction model is the main feature of the
         healthcure image based disease prediction system. It uses image
@@ -184,7 +336,17 @@
         model is built using Python , and it uses deep learning techniques to
         analyze medical images and predict diseases. The model is trained using
         a dataset of medical images and disease labels, and it can predict a
-        wide range of diseases, including Brain Tumour, Alzheimer, Pneumonia.
+        wide range of diseases, including Brain Tumour, Alzheimer, Pneumonia.<br />
+        HealthCure creates a completely new way to diagnose brain tumors,
+        Alzheimer’s disease, and pneumonia through the merging of artificial
+        intelligence and medical imaging. Our team uses deep learning in
+        combination with Python library OpenCV among other cutting edge
+        libraries like Tensorflow and scikit-learn to come up with useful tools
+        for healthcare professionals considering how essential accurate
+        diagnosis is. By doing this they aim at utilizing MRI and X-ray images
+        to deliver more accurate results than ever before by employing
+        convolutional neural networks (CNNs) and other computer vision
+        techniques.
       </p>
 
       <h2
@@ -245,31 +407,41 @@
           margin-bottom: 0px;
         "
       >
-        <b><i>AI in HealthCare</i></b>
+        <b><i>Brain Tumor Detection</i></b>
       </h3>
       <div class="row py-3" style="margin-bottom: 30px">
         <div class="col">
-          <p class="text-left" style="font-size: 18px">
-            The artificial intelligence (AI) technologies becoming ever present
-            in modern business and everyday life is also steadily being applied
-            to healthcare. The use of artificial intelligence in healthcare has
-            the potential to assist healthcare providers in many aspects of
-            patient care and administrative processes. Most AI and healthcare
-            technologies have strong relevance to the healthcare field, but the
-            tactics they support can vary significantly. And while some articles
-            on artificial intelligence in healthcare suggest that the use of
-            artificial intelligence in healthcare can perform just as well or
-            better than humans at certain procedures, such as diagnosing
-            disease, it will be a significant number of years before AI in
-            healthcare replaces humans for a broad range of medical tasks.
-          </p>
-        </div>
-        <div class="col">
           <img
-            src="../static/healthcure.png"
+            src="../static/bt.webp"
             class="img-fluid rounded mx-auto d-block"
             alt="..."
           />
+        </div>
+        <div class="col">
+          <p class="text-left" style="font-size: 18px">
+            Brain tumor detection is a multifaceted process involving various
+            medical evaluations and diagnostic tests. Neurological examinations
+            are particularly crucial, as they help assess the patient's vision,
+            hearing, balance, coordination, muscle strength, reflexes, and other
+            neurological functions. Following the initial assessment, imaging
+            tests play a pivotal role in identifying and characterizing brain
+            tumors. Magnetic Resonance Imaging (MRI) is the most commonly used
+            imaging technique, offering detailed images of the brain that allow
+            physicians to precisely locate the tumor and evaluate its size,
+            shape, and characteristics. Computed Tomography (CT) scans, which
+            use X-rays to produce cross-sectional images of the brain, are also
+            employed to detect and assess brain tumors. Additionally, Positron
+            Emission Tomography (PET) scans can provide valuable information
+            about the metabolic activity of the tumor, aiding in the
+            differentiation between benign and malignant tumors. Once a
+            suspicious area is identified, a biopsy may be performed to obtain a
+            tissue sample for further analysis. A brain tumor is one of the
+            deadliest illnesses which occurs due to the sudden and unregulated
+            brain tissue growth inside the skull. It can be either benign or
+            malignant. Malignant tumors can expand quickly and disperse across
+            the surrounding brain tissue, whereas benign tumors tend to grow
+            slowly.
+          </p>
         </div>
       </div>
 
@@ -282,31 +454,39 @@
           margin-bottom: 0px;
         "
       >
-        <b><i>Machine Learning</i></b>
+        <b><i>Alzheimer Detection</i></b>
       </h3>
       <div class="row py-3" style="margin-bottom: 30px">
         <div class="col">
-          <p class="text-left" style="font-size: 18px">
-            Machine learning is one of the most common forms of artificial
-            intelligence in healthcare. It is a broad technique at the core of
-            many approaches to AI and healthcare technology and there are many
-            versions of it. Using artificial intelligence in healthcare, the
-            most widespread utilization of traditional machine learning is
-            precision medicine. Being able to predict what treatment procedures
-            are likely to be successful with patients based on their make-up and
-            the treatment framework is a huge leap forward for many healthcare
-            organizations. The majority of AI in healthcare that uses machine
-            learning and precision medicine applications require data for
-            training, for which the end result is known. This is known as
-            supervised learning.
-          </p>
-        </div>
-        <div class="col">
           <img
-            src="../static/ml.png"
+            src="../static/Alzieme.jpeg"
             class="img-fluid rounded mx-auto d-block"
             alt="..."
           />
+        </div>
+        <div class="col">
+          <p class="text-left" style="font-size: 18px">
+            Alzheimer's disease is a progressive neurological disorder that
+            primarily affects the elderly population, although it can occur in
+            younger individuals as well. It is the most common cause of
+            dementia, a general term for memory loss and other cognitive
+            abilities severe enough to interfere with daily life. The exact
+            cause of Alzheimer's disease is not yet fully understood, but it is
+            believed to involve a combination of genetic, environmental, and
+            lifestyle factors. One of the hallmarks of Alzheimer's disease is
+            the abnormal accumulation of two proteins in the brain: beta-amyloid
+            plaques and tau tangles. These protein deposits interfere with the
+            communication between nerve cells, eventually leading to their death
+            and the progressive deterioration of brain tissue. The symptoms of
+            Alzheimer's disease typically develop slowly and worsen over time.
+            Early symptoms often include mild forgetfulness and difficulty
+            remembering recent events, conversations, or names. As the disease
+            progresses, individuals may experience more severe memory loss,
+            confusion, disorientation, and changes in behavior and personality.
+            Currently, there is no cure for Alzheimer's disease, but there are
+            treatments available that can help manage symptoms and improve
+            quality of life for affected individuals.
+          </p>
         </div>
       </div>
 
@@ -319,30 +499,85 @@
           margin-bottom: 0px;
         "
       >
-        <b><i>Natural Language Processing</i></b>
+        <b><i>Pneumonia Detection</i></b>
       </h3>
       <div class="row py-3" style="margin-bottom: 30px">
         <div class="col">
-          <p class="text-left" style="font-size: 18px">
-            Making sense of human language has been a goal of artificial
-            intelligence and healthcare technology for over 50 years. Most NLP
-            systems include forms of speech recognition or text analysis and
-            then translation. A common use of artificial intelligence in
-            healthcare involves NLP applications that can understand and
-            classify clinical documentation. NLP systems can analyze
-            unstructured clinical notes on patients, giving incredible insight
-            into understanding quality, improving methods, and better results
-            for patients.
-          </p>
-        </div>
-        <div class="col">
           <img
-            src="../static/nlp.jpg"
+            src="../static/Pneumonia.jpg"
             class="img-fluid rounded mx-auto d-block"
-            style="width: auto; height: 300px"
             alt="..."
           />
         </div>
+        <div class="col">
+          <p class="text-left" style="font-size: 18px">
+            Phenomena detection involves the systematic identification and
+            analysis of patterns and anomalies within data to uncover
+            significant events or trends. Whether it's identifying fraudulent
+            activities in financial transactions, detecting anomalies in network
+            traffic that could signify a cyber attack, or predicting outbreaks
+            of diseases based on patterns in health data, phenomena detection
+            plays a crucial role in numerous fields. By continuously monitoring
+            and analyzing large volumes of data in real-time, phenomena
+            detection systems can quickly identify deviations from normal
+            behavior, enabling organizations to take proactive measures to
+            address potential issues before they escalate. Pneumonia is an
+            infection that inflames the air sacs in one or both lungs. The air
+            sacs may fill with fluid or pus (purulent material), causing cough
+            with phlegm or pus, fever, chills, and difficulty breathing. A
+            variety of organisms, including bacteria, viruses and fungi, can
+            cause pneumonia. Pneumonia can range in seriousness from mild to
+            life-threatening. It is most serious for infants and young children,
+            people older than age 65, and people with health problems or
+            weakened immune systems.
+          </p>
+        </div>
+      </div>
+    </div>
+    <h3
+      class="text-center py-3"
+      style="
+        color: rgb(255, 255, 255);
+        font-variant: petite-caps;
+        background-color: rgb(0, 0, 0);
+        margin-bottom: 0px;
+      "
+    >
+      <b><i>AI in HealthCare</i></b>
+    </h3>
+    <div class="row py-3" style="margin-bottom: 30px">
+      <div class="col">
+        <img
+          src="../static/healthcure.png"
+          class="img-fluid rounded mx-auto d-block"
+          alt="..."
+        />
+      </div>
+      <div class="col">
+        <p class="text-left" style="font-size: 18px">
+          The artificial intelligence (AI) technologies becoming ever present in
+          modern business and everyday life is also steadily being applied to
+          healthcare. The use of artificial intelligence in healthcare has the
+          potential to assist healthcare providers in many aspects of patient
+          care and administrative processes. Most AI and healthcare technologies
+          have strong relevance to the healthcare field, but the tactics they
+          support can vary significantly. And while some articles on artificial
+          intelligence in healthcare suggest that the use of artificial
+          intelligence in healthcare can perform just as well or better than
+          humans at certain procedures, such as diagnosing disease, it will be a
+          significant number of years before AI in healthcare replaces humans
+          for a broad range of medical tasks.
+          <br />
+          Machine learning is one of the most common forms of artificial
+          intelligence in healthcare. It is a broad technique at the core of
+          many approaches to AI and healthcare technology and there are many
+          versions of it. Using artificial intelligence in healthcare, the most
+          widespread utilization of traditional machine learning is precision
+          medicine. Being able to predict what treatment procedures are likely
+          to be successful with patients based on their make-up and the
+          treatment framework is a huge leap forward for many healthcare
+          organizations.
+        </p>
       </div>
     </div>
 
@@ -373,6 +608,9 @@
                 >Rahul Kr Dubey</a
               >
             </li>
+            <li>
+              <a target="_blank" href="#">Palak Kakkar</a>
+            </li>
           </ul>
         </div>
         <div class="ft-main-item">
@@ -387,12 +625,12 @@
           <h2 class="ft-title">Contact</h2>
           <ul>
             <li>
-              <a href="https://omshiv-verma.netlify.app/"
+              <a href="https://omshiv-verma.netlify.app/" target="_blank"
                 >Email:omshiv.verma.it2024@gmail.com</a
               >
             </li>
             <li>
-              <a href="https://omshiv-verma.netlify.app/"
+              <a href="https://omshiv-verma.netlify.app/" target="_blank"
                 >Mobile No:+917392949998</a
               >
             </li>
